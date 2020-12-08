@@ -14,6 +14,16 @@ var spanEle = document.createElement('SPAN');
 spanEle.className = "hoverNode";
 spanEle.innerHTML = elements[i].tagName;
 elements[i].appendChild(spanEle);
+
+spanEle.addEventListener("click", function(e){
+    var parentElement = e.currentTarget.parentElement;
+    var parentId = parentElement.getAttribute("id");
+    var tagName = parentElement.tagName;
+    var className = parentElement.className;
+    var innerhtml = parentElement.innerHTML;
+    var alertMsg = parentId + " " + tagName + " " + className + " " + innerhtml;
+    alert(alertMsg);
+    });
 }
 }
 
