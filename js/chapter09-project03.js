@@ -28,5 +28,16 @@ spanEle.addEventListener("click", function(e){
 }
 
 });
+
+document.getElementById("hide").addEventListener("click", function(){
+    while(document.getElementsByClassName("hoverNode").length > 0)
+    {
+    var spanNodes = document.getElementsByClassName("hoverNode");
+    for (var i = 0; i < spanNodes.length; i++) {
+    spanNodes[i].remove();
+    }
+    }
+});
+
 }
 
